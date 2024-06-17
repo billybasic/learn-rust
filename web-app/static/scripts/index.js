@@ -1,5 +1,6 @@
+// DOMContentLoaded event for theme toggle
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOMContentLoaded event fired');
+    console.log('DOMContentLoaded event fired for theme toggle');
     const themeToggleBtn = document.getElementById('theme-toggle');
     if (!themeToggleBtn) {
         console.error('Theme toggle button not found');
@@ -46,5 +47,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Update theme text after toggling
         updateThemeText();
+    });
+});
+
+// Menu toggle function
+function toggleMenu() {
+    const dropdownMenu = document.getElementById('dropdown-menu');
+    dropdownMenu.classList.toggle('show');
+}
+
+// DOMContentLoaded event for GitHub link
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOMContentLoaded event fired for GitHub link');
+    const githubLinkBtn = document.getElementById('github-link');
+    if (!githubLinkBtn) {
+        console.error('GitHub link button not found');
+        return;
+    }
+
+    githubLinkBtn.addEventListener('click', () => {
+        window.location.href = 'https://github.com/billybasic/learn-rust';
     });
 });
